@@ -13,7 +13,7 @@ export const App = () => {
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Home />} end />
           <Route path="search" element={<SearchFilms />} />
         </Route>
         <Route path="*" element={<NotFound />} />
