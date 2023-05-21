@@ -17,6 +17,7 @@ export const App = () => {
           <Route path="search" element={<SearchFilms />} />
           <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer
         position="top-right"
