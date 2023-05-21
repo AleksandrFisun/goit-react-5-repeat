@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgoit_react_5_repeat=self.webpackChunkgoit_react_5_repeat||[]).push([[415],{415:function(e,t,r){r.r(t);var a=r(184);t.default=function(){return(0,a.jsx)("div",{children:(0,a.jsx)("h1",{children:"Home page"})})}}}]);
-//# sourceMappingURL=415.3211d8fc.chunk.js.map
