@@ -1,7 +1,8 @@
+import SearchFilm from '../components/SearchFilm/Search.film';
 const SearchFilms = () => {
   return (
     <div>
-      <h1>pageSearchFilms</h1>
+      <SearchFilm />
     </div>
   );
 };

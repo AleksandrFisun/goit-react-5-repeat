@@ -1,8 +1,42 @@
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+
+import TrendingFilms from '../components/TrendingFilms/TrendingFilms';
+import { Modal } from '../Modal/Modal';
+import CardFilm from '../components/CardFilm/CardFilm';
+
 const Home = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams('');
+
+  useEffect(() => {
+    if (searchParams.get('id') === null) {
+      setModalVisible(false);
+      return;
+    }
+    setModalVisible(true);
+  }, [searchParams]);
+
+  const onClickCard = e => {
+    const id = e.currentTarget.id;
+    const nextParams = id !== '' ? { id } : {};
+    setSearchParams(nextParams);
+  };
+
+  const onCloseBackdrop = () => {
+    setModalVisible(false);
+    setSearchParams('');
+  };
+
   return (
-    <div>
-      <h1>Home page</h1>
-    </div>
+    <>
+      <TrendingFilms onClickIdFilm={onClickCard} />
+      {modalVisible && (
+        <Modal onCloseBackdrop={onCloseBackdrop}>
+          <CardFilm />
+        </Modal>
+      )}
+    </>
   );
 };
 
