@@ -6,7 +6,6 @@ export const Searchbar = styled.header`
   left: 0;
   z-index: 1000;
   position: sticky;
-  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
