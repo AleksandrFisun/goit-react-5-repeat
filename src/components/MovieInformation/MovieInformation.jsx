@@ -1,5 +1,6 @@
 import { Outlet, useParams, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
+import Loader from '../../loader/Loader';
 
 import { getFilm } from '../Api/Api';
 import {
@@ -95,7 +96,15 @@ const MovieInformation = () => {
                   </LinkWrapper>
                   {visibleMore && (
                     <WrapperMoreInfo>
-                      <Outlet />
+                      <Suspense
+                        fallback={
+                          <div>
+                            <Loader />
+                          </div>
+                        }
+                      >
+                        <Outlet />
+                      </Suspense>
                     </WrapperMoreInfo>
                   )}
                 </CardListInfoWrapper>
