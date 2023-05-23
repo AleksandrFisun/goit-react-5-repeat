@@ -43,6 +43,7 @@ export const App = () => {
           </NavList>
         </Nav>
       </Searchbar>
+      
       <Routes>
         {/* <Route path="/" element={<SharedLayout />}> */}
         <Route path="/" element={<Home />} />
