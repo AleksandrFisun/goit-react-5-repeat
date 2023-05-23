@@ -12,7 +12,7 @@ import {
   LogotypeWrapper,
   LogotypeText,
 } from './SharedLayout.style';
-import Loader from '../../loader/Loader';
+import Loader from 'loader/Loader';
 
 export const SharedLayout = () => {
   return (
