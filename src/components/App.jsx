@@ -10,7 +10,7 @@ const AdditionalInformation = lazy(() =>
     '../components/MovieInformation/AdditionalInformation/AdditionalInformation'
   )
 );
-const NotFound = lazy(() => import('../pages/NotFound'));
+const GenericNotFound = lazy(() => import('../pages/NotFound'));
 
 export const App = () => {
   return (
@@ -22,8 +22,9 @@ export const App = () => {
           <Route path="/search/:id" element={<FilmDetails />}>
             <Route path="more" element={<AdditionalInformation />}></Route>
           </Route>
+          <Route path="*" exact={true} component={<GenericNotFound />} />
         </Route>
-        <Route path="*" exact={true} component={<NotFound />} />
+        <Route path="*" exact={true} component={<GenericNotFound />} />
       </Routes>
     </>
   );
