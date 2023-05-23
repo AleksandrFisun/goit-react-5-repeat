@@ -1,5 +1,5 @@
 import Error from '../components/Error/Error';
-const NotFound = () => {
+const GenericNotFound = () => {
   return <Error />;
 };
-export default NotFound;
+export default GenericNotFound;
