@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { SharedLayout } from './SharedLayout/SharedLayout';
+import Loader from '../loader/Loader';
 
 const Home = lazy(() => import('../pages/Home'));
 const SearchFilms = lazy(() => import('../pages/SearchFilms'));
@@ -17,16 +18,44 @@ export const App = () => {
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
-          <Route path="search" element={<SearchFilms />} />
-          <Route path="search/:id" element={<FilmDetails />}>
-            <Route path="more" element={<AdditionalInformation />}></Route>
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loader />}>
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="search"
+            element={
+              <Suspense fallback={<Loader />}>
+                <SearchFilms />
+              </Suspense>
+            }
+          />
+          <Route
+            path="search/:id"
+            element={
+              <Suspense fallback={<Loader />}>
+                <FilmDetails />
+              </Suspense>
+            }
+          >
+            <Route
+              path="more"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <AdditionalInformation />
+                </Suspense>
+              }
+            ></Route>
           </Route>
         </Route>
         <Route
           path="*"
           element={
-            <Suspense fallback={<h2>Loading ...</h2>}>
+            <Suspense fallback={<Loader />}>
               <NotFound />
             </Suspense>
           }

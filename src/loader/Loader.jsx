@@ -8,7 +8,7 @@ import {
 } from './Loader.style';
 
 const loader = document.querySelector('#loader-root');
-export const Loader = () => {
+const Loader = () => {
   return createPortal(
     <LoaderBасkdrор>
       <LoaderConatiner>
