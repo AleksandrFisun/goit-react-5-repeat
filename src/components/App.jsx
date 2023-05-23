@@ -22,9 +22,8 @@ export const App = () => {
           <Route path="/search/:id" element={<FilmDetails />}>
             <Route path="more" element={<AdditionalInformation />}></Route>
           </Route>
-          <Route path="*" exact={true} component={<NotFound />} />
         </Route>
-        <Route path="*" exact={true} component={<NotFound />} />
+        <Route path="*" component={<NotFound />} />
       </Routes>
     </>
   );
