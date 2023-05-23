@@ -1,6 +1,6 @@
 import { useSearchParams, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getFilmQuery } from '../Api/Api';
+import { getFilmQuery } from 'components/Api/Api';
 import {
   ImgItem,
   CardWrapper,
@@ -11,7 +11,7 @@ import {
   Button,
   Form,
   Input,
-} from './SearchFilm.style';
+} from 'components/SearchFilm/SearchFilm.style';
 
 const SearchFilm = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -21,7 +21,6 @@ const SearchFilm = () => {
   const [films, setFilms] = useState([]);
   const filmName = searchParams.get('query');
   const location = useLocation();
-
 
   const poster = 'https://image.tmdb.org/t/p/w500';
 

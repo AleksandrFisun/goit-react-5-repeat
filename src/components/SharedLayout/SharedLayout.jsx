@@ -11,7 +11,7 @@ import {
   Logotype,
   LogotypeWrapper,
   LogotypeText,
-} from './SharedLayout.style';
+} from 'components/SharedLayout/SharedLayout.style';
 import Loader from 'loader/Loader';
 
 export const SharedLayout = () => {

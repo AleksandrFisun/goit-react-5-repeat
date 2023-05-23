@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
-import { getFilmsTrending } from '../Api/Api';
-import { FilmList, FilmItem, FilmImg, FilmTitle } from './TrendingFilms.style';
+import { getFilmsTrending } from 'components/Api/Api';
+import {
+  FilmList,
+  FilmItem,
+  FilmImg,
+  FilmTitle,
+} from 'components/TrendingFilms/TrendingFilms.style';
 
 const TrendingFilms = ({ onClickIdFilm }) => {
   const [trendingFilms, setTrendingFilms] = useState([]);

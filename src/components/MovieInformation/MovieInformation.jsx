@@ -1,8 +1,8 @@
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { useEffect, useState, Suspense } from 'react';
-import Loader from '../../loader/Loader';
+import Loader from 'loader/Loader';
 
-import { getFilm } from '../Api/Api';
+import { getFilm } from 'components/Api/Api';
 import {
   Card,
   WrapperCard,

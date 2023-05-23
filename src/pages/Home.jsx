@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import TrendingFilms from '../components/TrendingFilms/TrendingFilms';
-import { Modal } from '../Modal/Modal';
-import CardFilm from '../components/CardFilm/CardFilm';
+import TrendingFilms from 'components/TrendingFilms/TrendingFilms';
+import { Modal } from 'Modal/Modal';
+import CardFilm from 'components/CardFilm/CardFilm';
 
 const Home = () => {
   const [modalVisible, setModalVisible] = useState(false);

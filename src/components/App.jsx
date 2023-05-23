@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 
-import { SharedLayout } from './SharedLayout/SharedLayout';
+import { SharedLayout } from 'components/SharedLayout/SharedLayout';
 
 const Home = lazy(() => import('pages/Home'));
 const SearchFilms = lazy(() => import('pages/SearchFilms'));
@@ -10,7 +10,7 @@ const NotFound = lazy(() => import('pages/NotFound'));
 
 const AdditionalInformation = lazy(() =>
   import(
-    '../components/MovieInformation/AdditionalInformation/AdditionalInformation'
+    'components/MovieInformation/AdditionalInformation/AdditionalInformation'
   )
 );
 
