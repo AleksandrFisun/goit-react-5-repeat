@@ -2,7 +2,7 @@
   "name": "goit-react-5-repeat",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aleksandrfisun.github.io/goit-react-5-repeat/",
+  "homepage": "https://aleksandrfisun.github.io/goit-react-5-repeat",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
