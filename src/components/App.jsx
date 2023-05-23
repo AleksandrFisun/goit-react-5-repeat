@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { SharedLayout } from './SharedLayout/SharedLayout';
 
 const Home = lazy(() => import('../pages/Home'));
@@ -14,58 +14,18 @@ const NotFound = lazy(() => import('../pages/NotFound'));
 
 export const App = () => {
   return (
-    <div>
-      {/* <Routes>
+    <>
+      <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="/search" element={<SearchFilms />} />
           <Route path="/search/:id" element={<FilmDetails />}>
             <Route path="more" element={<AdditionalInformation />}></Route>
           </Route>
-          <Route path="*" exact={true} component={<GenericNotFound />} />
+          <Route path="*" exact={true} component={<NotFound />} />
         </Route>
-        <Route path="*" exact={true} component={<GenericNotFound />} />
-      </Routes> */}
-
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route
-            index
-            element={
-              <Suspense fallback={<h2>Loading ...</h2>}>
-                <Home />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/search"
-            element={
-              <Suspense fallback={<h2>Loading ...</h2>}>
-                <SearchFilms />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/search/:id"
-            element={
-              <Suspense fallback={<h2>Loading ...</h2>}>
-                <FilmDetails />
-              </Suspense>
-            }
-          >
-            <Route path="more" element={<AdditionalInformation />} />
-          </Route>
-        </Route>
-
-        <Route
-          path="*"
-          element={
-            <Suspense fallback={<h2>Loading ...</h2>}>
-              <NotFound />
-            </Suspense>
-          }
-        />
+        <Route path="*" exact={true} component={<NotFound />} />
       </Routes>
-    </div>
+    </>
   );
 };
