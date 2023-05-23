@@ -23,7 +23,7 @@ export const App = () => {
             <Route path="more" element={<AdditionalInformation />}></Route>
           </Route>
         </Route>
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" exact={true} component={<NotFound />} />
       </Routes>
     </>
   );
