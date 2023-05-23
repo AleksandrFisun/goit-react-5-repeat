@@ -14,7 +14,7 @@ import {
 } from './SharedLayout.style';
 import Loader from '../../loader/Loader';
 
-export const SharedLayout = () => {
+const SharedLayout = () => {
   return (
     <>
       <Searchbar>
@@ -60,3 +60,4 @@ export const SharedLayout = () => {
     </>
   );
 };
+export default SharedLayout;
